@@ -113,7 +113,7 @@ class DataFilter extends DataForm
                             $this->query = call_user_func_array([$this->model, $query_scope], $query_scope_params);
                             
                         } 
-                        continue;
+                        continue 2;
                     }
 
                     //detect if where should be deep (on relation)
@@ -172,7 +172,7 @@ class DataFilter extends DataForm
                                           });
                                       }
                                   }
-                                continue;
+                                continue 2;
                             }
 
                             switch ($field->clause) {
