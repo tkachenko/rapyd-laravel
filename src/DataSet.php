@@ -202,7 +202,7 @@ class DataSet extends Widget
                     //skip ahead past the offset.
                     if ($skip < $offset) {
                         $skip++;
-                        continue;
+                        continue 2;
                     }
                     //gather the rows to render
                     else {

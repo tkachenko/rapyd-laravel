@@ -146,7 +146,7 @@ class DataGrid extends DataSet
         foreach ($this->columns as $column) {
 
             if (in_array($column->name, array("_edit")))
-                continue;
+                break;
 
             $cell = new Cell($column->name);
             $value = str_replace('"', '""', str_replace(PHP_EOL, '', strip_tags($this->getCellValue($column, $tablerow, $sanitize))));
